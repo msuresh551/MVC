@@ -1,0 +1,11 @@
+﻿@model MVCExample1.Models.Part36HTMLTextBoxnFor
+
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Index1</h2>
+
+@Html.TextBoxFor(m => m.Companyname)
+<br />
+@Html.DropDownListFor(m => m.Departments1, new SelectList(Model.Departments1, "Id", "Department_Name"), "Select Department")

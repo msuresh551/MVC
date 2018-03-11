@@ -1,0 +1,6 @@
+﻿@model BusinessObjects.City
+
+    @Html.HiddenFor(h=>h.ID)
+    @Html.HiddenFor(h => h.Name)
+    @Html.CheckBoxFor(x => x.IsSelected)
+    @Html.DisplayFor(x => x.Name)

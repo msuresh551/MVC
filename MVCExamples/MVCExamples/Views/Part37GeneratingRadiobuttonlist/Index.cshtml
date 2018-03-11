@@ -1,0 +1,16 @@
+﻿@model MVCExamples.Models.Part36HTMLTextBoxnFor
+
+@using (Html.BeginForm())
+{
+
+    foreach (var Department in Model.Departments1)
+    {
+        @Html.RadioButtonFor(m => m.selectedDepartmet, Department.Id
+     , (Department.IsSelected.HasValue && Department.IsSelected.Value) ? new { @checked = true } : null
+       )@Department.Department_Name
+        <br />
+    }
+    <br />
+
+    <br /><input type="submit" name="Submit" />
+}

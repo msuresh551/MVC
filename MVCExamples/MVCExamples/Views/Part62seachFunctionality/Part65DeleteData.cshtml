@@ -1,0 +1,106 @@
+﻿@model IEnumerable<BusinessObjects.EmployeeBO>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@*@{
+        Layout = null;
+    }*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Part65DeleteData</title>
+</head>
+<body>
+
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $("#chkAll").click(function () {
+                $("input[name='ids']").prop("checked", this.checked);
+            });
+            $("input[name='ids']").click(function () {
+                if ($("input[name='ids']").length == $("input[name='ids']:checked").length) {
+                    $("#chkAll").prop("checked", "checked");
+                }
+                else {
+                    $("#chkAll").removeProp("checked");
+                }
+            });
+        });
+
+    </script>
+
+    @using (Html.BeginForm("DeleteSelected", "Part62seachFunctionality", FormMethod.Post))
+    {
+        <table class="table">
+            <tr>
+                <th><input type="checkbox" id="chkAll" name="chkAll" /></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Employeename)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Department)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PersonnelBlog)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateofJoin)
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ids" name="ids" value="@item.EmpID" />
+                        @*@Html.CheckBox("chkDelete", new { selected =item.EmpID})*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employeename)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PersonnelBlog)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateofJoin)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+        <br />
+
+        <input type="submit" value="Delete Selected Record" />
+    }
+</body>
+</html>

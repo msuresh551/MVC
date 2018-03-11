@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCExamples", "MVCExamples\MVCExamples.csproj", "{4E198B53-6756-4FCF-973A-0C9A5A7AAEDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "..\..\MVCExample1\BusinessObjects\BusinessObjects.csproj", "{EE0EB6E5-3877-4E80-B0D7-5CB8A2E74A76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E198B53-6756-4FCF-973A-0C9A5A7AAEDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E198B53-6756-4FCF-973A-0C9A5A7AAEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E198B53-6756-4FCF-973A-0C9A5A7AAEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E198B53-6756-4FCF-973A-0C9A5A7AAEDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE0EB6E5-3877-4E80-B0D7-5CB8A2E74A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0EB6E5-3877-4E80-B0D7-5CB8A2E74A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0EB6E5-3877-4E80-B0D7-5CB8A2E74A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0EB6E5-3877-4E80-B0D7-5CB8A2E74A76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

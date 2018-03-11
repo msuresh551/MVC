@@ -1,0 +1,9 @@
+﻿@model MVCExamples.Models.Part39ListBoxControl
+
+
+@using (Html.BeginForm())
+{
+    @Html.ListBoxFor(m => m.selectedlistItems, Model.selectlistitems)
+    <br />
+    <input type="submit" name="Submit" value="Submit" />
+}

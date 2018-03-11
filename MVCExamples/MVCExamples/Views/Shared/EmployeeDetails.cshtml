@@ -1,0 +1,48 @@
+﻿@model MVCExample1.Models.Employee
+@{
+    ViewBag.Title = "EmployeeDetails";
+}
+
+<h2>EmployeeDetails</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <table>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.username)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.username)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.EmailID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.EmailID)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ID)
+            </td>
+        </tr>
+        <tr>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+        </tr>
+
+    </table>
+    @Html.ActionLink("Back to Home", "Part9GenerateHyperlinks")
+
+</div>
+

@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomeCountry</title>
+</head>
+<body>
+
+    @*@Html.Action("ChildCoutries", new { contries = new List<string> { "USA", "UK", "India" } } )*@
+    @{
+        Html.RenderAction("ChildCoutries", new { contries = new List<string> { "USA", "UK", "India" } });
+    }
+   </body>
+</html>

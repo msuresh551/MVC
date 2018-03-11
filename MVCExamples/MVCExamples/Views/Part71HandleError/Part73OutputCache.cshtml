@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BusinessObjects.EmployeeBO>
+
+@{
+    Layout = null;
+}
+
+<table class="table" style="font-family:Arial;font-weight:bold;">
+    <tr>
+        <td colspan="7" align="center">Employee List Retrieved @@ @DateTime.Now.ToString()</td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employeename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateofJoin)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employeename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateofJoin)
+            </td>
+        </tr>
+    }
+    <tr>
+        <td colspan="7">
+            @Html.Action("Part73GetEmployeeCount");
+        </td>
+    </tr>
+</table>
+

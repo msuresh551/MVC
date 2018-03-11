@@ -1,0 +1,56 @@
+﻿@model List<MVCExamples.Models.Customer>
+@{
+    ViewBag.Title = "Display";
+    Layout = null;
+}
+<script type="text/javascript">
+    function getdetails(id) {
+        alert(id);
+    }
+</script>
+<table width="100%">
+    <tr>
+        <td align="center">
+            <h2>Using View Data Countries</h2>
+
+
+            <ul>
+                @foreach (string name in (List<string>)ViewData["Contries"])
+                {
+                    <li>@name </li>
+                }
+
+            </ul>
+            <h2>Using View Bag Countries</h2>
+            <ul>
+                @foreach (string name in ViewBag.Contries)
+                {
+                    <li>@name </li>
+                }
+
+            </ul>
+
+            <h2>This is Customer Class</h2>
+            <table>
+                <tr>
+                    <td> ID</td>
+                    <td> Name</td>
+                    <td> Email</td>
+                    <td> Phone</td>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><input type="button" id="btnsubmit" value="Submit" onclick="getdetails(@item.CustID)" /> </td>
+                        <td>@item.CustID </td>
+                        <td>@item.Name</td>
+                        <td>@item.Email</td>
+                        <td>@item.Mobile</td>
+
+                    </tr>
+                }
+            </table>
+        </td>
+    </tr>
+</table>

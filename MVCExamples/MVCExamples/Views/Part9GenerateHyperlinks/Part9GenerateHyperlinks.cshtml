@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BusinessObjects.EmployeeBO>
+
+@using BusinessObjects;
+
+@{
+
+    ViewBag.Title = "Part 9 Generate hyperlinks";
+}
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <table width="300">
+        <tr>
+            <td width="100" align="left">Username</td>
+            <td>Email ID</td>
+
+        </tr>
+        @foreach (EmployeeBO emp in @Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(emp.Employeename, "EmployeeDetails", new { id = emp.EmpID })</td>
+                <td>@Html.ActionLink(emp.EmpID.ToString(), "EmployeeDetails", new { id = emp.EmpID })</td>
+            </tr>
+        }
+    </table>
+
+</div>
