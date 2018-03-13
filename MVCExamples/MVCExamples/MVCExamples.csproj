@@ -177,6 +177,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmployeeGridController.cs" />
+    <Compile Include="Controllers\EntityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Part10MultipleViewsController.cs" />
@@ -197,8 +198,10 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\EmployeeDBContext.cs" />
     <Compile Include="Models\EmployeeDetails.cs" />
     <Compile Include="Models\EmployeeGrid.cs" />
+    <Compile Include="Models\EnitityClass.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Part36HTMLTextBoxnFor.cs" />
@@ -291,6 +294,7 @@
     <Content Include="Views\Shared\ErrorData.cshtml" />
     <Content Include="Views\EmployeeGrid\Edit.cshtml" />
     <Content Include="Views\EmployeeGrid\Index.cshtml" />
+    <Content Include="Views\Entity\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
